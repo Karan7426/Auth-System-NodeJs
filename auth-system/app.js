@@ -1,14 +1,17 @@
 const express = require('express');
-const sequelize = require('./Config/db'); // Corrected path (use lowercase 'config')
-const User = require('./models/User'); // Import the User model (optional, but can be useful)
+const sequelize = require('./Config/db');  
+const User = require('./models/User');  
 
 const app = express();
 
 // Middleware
-app.use(express.json()); // Parse JSON request bodies
+app.use(express.json());  
+
+
 
 // Routes
-app.use('/api/auth', require('./routes/authRoutes')); // Define your routes here
+app.use('/api/auth', require('./routes/authRoutes'));  
+
 
 // Synchronize models with the database
 sequelize.sync({ force: false })
@@ -19,7 +22,7 @@ sequelize.sync({ force: false })
     console.error('Error synchronizing the database:', err);
   });
 
-// Start the server
+ 
 const PORT = process.env.PORT || 5001;
 
 app.listen(PORT, () => {

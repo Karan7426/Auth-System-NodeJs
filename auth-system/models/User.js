@@ -1,6 +1,5 @@
-// models/User.js
-const { DataTypes } = require('sequelize');
-const sequelize = require('../Config/db'); // Import the configured Sequelize instance
+ const { DataTypes } = require('sequelize');
+const sequelize = require('../Config/db');  
 
 const User = sequelize.define('User', {
   email: {
@@ -8,7 +7,7 @@ const User = sequelize.define('User', {
     allowNull: false,
     unique: true,
     validate: {
-      isEmail: true // Ensure the email is valid
+      isEmail: true  
     }
   },
   password: {
@@ -16,7 +15,7 @@ const User = sequelize.define('User', {
     allowNull: false
   }
 }, {
-  timestamps: true, // Optional: Add timestamps to track createdAt and updatedAt
+  timestamps: true,  
 });
 
 module.exports = User;
