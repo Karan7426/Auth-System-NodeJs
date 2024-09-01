@@ -23,7 +23,7 @@ A Node.js authentication system with JWT-based authentication and MySQL database
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/auth-system.git
+   git clone https://github.com/Karan7426/Auth-System-NodeJs.git
    ```
 2. Navigate to the project directory:
    ```bash
