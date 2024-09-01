@@ -7,6 +7,6 @@ const router = express.Router();
 
 router.post('/register', validateRegister, register);
 router.post('/login', validateLogin, login);
-router.get('/me', authMiddleware, getCurrentUser); // Note: ensure `authMiddleware` is correctly implemented
+router.get('/me', authMiddleware, getCurrentUser);  
 
 module.exports = router;
